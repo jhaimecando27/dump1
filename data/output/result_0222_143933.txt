@@ -1,0 +1,45 @@
+POI: 20 | Tenure: 10
+avg soln: 544.91
+dif: 88.33
+avg time: 0.02
+================
+POI: 20 | Tenure: 20
+avg soln: 544.91
+dif: 88.33
+avg time: 0.02
+================
+POI: 20 | Tenure: 40
+avg soln: 544.91
+dif: 88.33
+avg time: 0.02
+================
+POI: 40 | Tenure: 10
+avg soln: 1259.55
+dif: 96.25
+avg time: 0.12
+================
+POI: 40 | Tenure: 20
+avg soln: 1259.55
+dif: 96.25
+avg time: 0.12
+================
+POI: 40 | Tenure: 40
+avg soln: 1259.55
+dif: 96.25
+avg time: 0.13
+================
+POI: 80 | Tenure: 10
+avg soln: 2982.38
+dif: 53.94
+avg time: 0.98
+================
+POI: 80 | Tenure: 20
+avg soln: 2982.38
+dif: 53.94
+avg time: 0.98
+================
+POI: 80 | Tenure: 40
+avg soln: 2982.38
+dif: 53.94
+avg time: 0.98
+================

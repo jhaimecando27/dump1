@@ -1,0 +1,62 @@
+0223_145641
+=====Result=====
+POI: 500 | Tenure: 10
+avg soln: 244.4
+dif: 10.08
+avg best: 233.19
+dif best: 0.0
+avg time: 292.19
+================
+
+POI: 500 | Tenure: 20
+avg soln: 244.4
+dif: 10.08
+avg best: 233.19
+dif best: 0.0
+avg time: 287.57
+================
+
+POI: 500 | Tenure: 40
+avg soln: 244.4
+dif: 10.08
+avg best: 233.19
+dif best: 0.0
+avg time: 288.8
+================
+
+0223_145641
+=====Result (Perturbation)=====
+POI: 500 | Tenure: 10
+avg soln: 244.4
+dif: 10.08
+avg best: 233.19
+dif best: 0.0
+avg time: 288.93
+================
+
+POI: 500 | Tenure: 20
+avg soln: 244.4
+dif: 10.08
+avg best: 233.19
+dif best: 0.0
+avg time: 283.67
+================
+
+POI: 500 | Tenure: 40
+avg soln: 244.4
+dif: 10.08
+avg best: 233.19
+dif best: 0.0
+avg time: 285.3
+================
+
+0223_145641
+=====Result (Adaptive Tenure)=====
+POI: 500 
+avg soln: 244.4
+dif: 10.08
+avg best: 233.19
+dif best: 0.0
+avg time: 284.93
+================
+

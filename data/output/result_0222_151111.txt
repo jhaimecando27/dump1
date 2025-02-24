@@ -1,0 +1,62 @@
+0222_151111
+=====Result=====
+POI: 20 | Tenure: 10
+avg soln: 573.45
+dif: 114.32
+avg time: 0.02
+================
+POI: 20 | Tenure: 20
+avg soln: 573.45
+dif: 114.32
+avg time: 0.02
+================
+POI: 20 | Tenure: 40
+avg soln: 573.45
+dif: 114.32
+avg time: 0.02
+================
+POI: 40 | Tenure: 10
+avg soln: 1215.67
+dif: 89.72
+avg time: 0.13
+================
+POI: 40 | Tenure: 20
+avg soln: 1215.67
+dif: 89.72
+avg time: 0.13
+================
+POI: 40 | Tenure: 40
+avg soln: 1215.67
+dif: 89.72
+avg time: 0.13
+================
+POI: 80 | Tenure: 10
+avg soln: 2936.56
+dif: 47.63
+avg time: 1.0
+================
+POI: 80 | Tenure: 20
+avg soln: 2936.56
+dif: 47.63
+avg time: 0.99
+================
+POI: 80 | Tenure: 40
+avg soln: 2936.56
+dif: 47.63
+avg time: 1.0
+================
+POI: 160 | Tenure: 10
+avg soln: 7407.1
+dif: 31.39
+avg time: 8.05
+================
+POI: 160 | Tenure: 20
+avg soln: 7407.1
+dif: 31.39
+avg time: 8.12
+================
+POI: 160 | Tenure: 40
+avg soln: 7407.1
+dif: 31.39
+avg time: 8.1
+================

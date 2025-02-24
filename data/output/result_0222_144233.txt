@@ -1,0 +1,47 @@
+0222_144233
+=====Result=====
+POI: 20 | Tenure: 10
+avg soln: 580.79
+dif: 73.84
+avg time: 0.02
+================
+POI: 20 | Tenure: 20
+avg soln: 580.79
+dif: 73.84
+avg time: 0.02
+================
+POI: 20 | Tenure: 40
+avg soln: 580.79
+dif: 73.84
+avg time: 0.02
+================
+POI: 40 | Tenure: 10
+avg soln: 1331.3
+dif: 86.93
+avg time: 0.12
+================
+POI: 40 | Tenure: 20
+avg soln: 1331.3
+dif: 86.93
+avg time: 0.12
+================
+POI: 40 | Tenure: 40
+avg soln: 1331.3
+dif: 86.93
+avg time: 0.12
+================
+POI: 80 | Tenure: 10
+avg soln: 3365.15
+dif: 46.84
+avg time: 0.95
+================
+POI: 80 | Tenure: 20
+avg soln: 3365.15
+dif: 46.84
+avg time: 0.96
+================
+POI: 80 | Tenure: 40
+avg soln: 3365.15
+dif: 46.84
+avg time: 0.97
+================

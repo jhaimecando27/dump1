@@ -1,0 +1,62 @@
+0222_171746
+=====Result=====
+POI: 20 | Tenure: 10
+avg soln: 553.77
+dif: 117.05
+avg time: 0.03
+================
+POI: 20 | Tenure: 20
+avg soln: 553.77
+dif: 117.05
+avg time: 0.03
+================
+POI: 20 | Tenure: 40
+avg soln: 553.77
+dif: 117.05
+avg time: 0.02
+================
+POI: 40 | Tenure: 10
+avg soln: 1288.27
+dif: 84.11
+avg time: 0.13
+================
+POI: 40 | Tenure: 20
+avg soln: 1288.27
+dif: 84.11
+avg time: 0.13
+================
+POI: 40 | Tenure: 40
+avg soln: 1288.27
+dif: 84.11
+avg time: 0.12
+================
+POI: 80 | Tenure: 10
+avg soln: 3147.34
+dif: 56.41
+avg time: 0.98
+================
+POI: 80 | Tenure: 20
+avg soln: 3147.34
+dif: 56.41
+avg time: 0.98
+================
+POI: 80 | Tenure: 40
+avg soln: 3147.34
+dif: 56.41
+avg time: 0.97
+================
+POI: 160 | Tenure: 10
+avg soln: 6756.4
+dif: 28.33
+avg time: 8.05
+================
+POI: 160 | Tenure: 20
+avg soln: 6756.4
+dif: 28.33
+avg time: 8.07
+================
+POI: 160 | Tenure: 40
+avg soln: 6756.4
+dif: 28.33
+avg time: 8.83
+================

@@ -1,0 +1,62 @@
+0222_174622
+=====Result=====
+POI: 20 | Tenure: 10
+avg soln: 469.16
+dif: 79.39
+avg time: 0.02
+================
+POI: 20 | Tenure: 20
+avg soln: 469.16
+dif: 79.39
+avg time: 0.02
+================
+POI: 20 | Tenure: 40
+avg soln: 469.16
+dif: 79.39
+avg time: 0.01
+================
+POI: 40 | Tenure: 10
+avg soln: 1320.44
+dif: 85.4
+avg time: 0.12
+================
+POI: 40 | Tenure: 20
+avg soln: 1320.44
+dif: 85.4
+avg time: 0.13
+================
+POI: 40 | Tenure: 40
+avg soln: 1320.44
+dif: 85.4
+avg time: 0.12
+================
+POI: 80 | Tenure: 10
+avg soln: 3124.88
+dif: 58.4
+avg time: 1.0
+================
+POI: 80 | Tenure: 20
+avg soln: 3124.88
+dif: 58.4
+avg time: 0.98
+================
+POI: 80 | Tenure: 40
+avg soln: 3124.88
+dif: 58.4
+avg time: 0.98
+================
+POI: 160 | Tenure: 10
+avg soln: 6930.91
+dif: 30.45
+avg time: 7.96
+================
+POI: 160 | Tenure: 20
+avg soln: 6930.91
+dif: 30.45
+avg time: 8.06
+================
+POI: 160 | Tenure: 40
+avg soln: 6930.91
+dif: 30.45
+avg time: 7.99
+================

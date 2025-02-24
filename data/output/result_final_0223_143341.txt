@@ -1,0 +1,174 @@
+0223_143341
+=====Result=====
+POI: 20 | Tenure: 10
+avg soln: 865.81
+dif: 8.61
+avg best: 835.13
+dif best: 0.0
+avg time: 0.0
+================
+
+POI: 20 | Tenure: 20
+avg soln: 865.81
+dif: 8.61
+avg best: 835.13
+dif best: 0.0
+avg time: 0.0
+================
+
+POI: 20 | Tenure: 40
+avg soln: 865.81
+dif: 8.61
+avg best: 835.13
+dif best: 0.0
+avg time: 0.0
+================
+
+POI: 40 | Tenure: 10
+avg soln: 1749.11
+dif: 2.16
+avg best: 1734.68
+dif best: 0.0
+avg time: 0.01
+================
+
+POI: 40 | Tenure: 20
+avg soln: 1749.11
+dif: 2.16
+avg best: 1734.68
+dif best: 0.0
+avg time: 0.01
+================
+
+POI: 40 | Tenure: 40
+avg soln: 1749.11
+dif: 2.16
+avg best: 1734.68
+dif best: 0.0
+avg time: 0.01
+================
+
+POI: 80 | Tenure: 10
+avg soln: 4177.96
+dif: 2.67
+avg best: 4139.36
+dif best: 0.0
+avg time: 0.02
+================
+
+POI: 80 | Tenure: 20
+avg soln: 4177.96
+dif: 2.67
+avg best: 4139.36
+dif best: 0.0
+avg time: 0.02
+================
+
+POI: 80 | Tenure: 40
+avg soln: 4177.96
+dif: 2.67
+avg best: 4139.36
+dif best: 0.0
+avg time: 0.01
+================
+
+0223_143341
+=====Result (Perturbation)=====
+POI: 20 | Tenure: 10
+avg soln: 865.81
+dif: 8.61
+avg best: 835.13
+dif best: 0.0
+avg time: 0.0
+================
+
+POI: 20 | Tenure: 20
+avg soln: 865.81
+dif: 8.61
+avg best: 835.13
+dif best: 0.0
+avg time: 0.0
+================
+
+POI: 20 | Tenure: 40
+avg soln: 865.81
+dif: 8.61
+avg best: 835.13
+dif best: 0.0
+avg time: 0.0
+================
+
+POI: 40 | Tenure: 10
+avg soln: 1749.11
+dif: 2.16
+avg best: 1734.68
+dif best: 0.0
+avg time: 0.01
+================
+
+POI: 40 | Tenure: 20
+avg soln: 1749.11
+dif: 2.16
+avg best: 1734.68
+dif best: 0.0
+avg time: 0.01
+================
+
+POI: 40 | Tenure: 40
+avg soln: 1749.11
+dif: 2.16
+avg best: 1734.68
+dif best: 0.0
+avg time: 0.01
+================
+
+POI: 80 | Tenure: 10
+avg soln: 4177.96
+dif: 2.67
+avg best: 4139.36
+dif best: 0.0
+avg time: 0.01
+================
+
+POI: 80 | Tenure: 20
+avg soln: 4177.96
+dif: 2.67
+avg best: 4139.36
+dif best: 0.0
+avg time: 0.01
+================
+
+POI: 80 | Tenure: 40
+avg soln: 4177.96
+dif: 2.67
+avg best: 4139.36
+dif best: 0.0
+avg time: 0.02
+================
+
+0223_143341
+=====Result (Adaptive Tenure)=====
+POI: 20 
+avg soln: 865.81
+dif: 8.61
+avg best: 835.13
+dif best: 0.0
+avg time: 0.0
+================
+
+POI: 40 
+avg soln: 1749.11
+dif: 2.16
+avg best: 1734.68
+dif best: 0.0
+avg time: 0.01
+================
+
+POI: 80 
+avg soln: 4177.96
+dif: 2.67
+avg best: 4139.36
+dif best: 0.0
+avg time: 0.01
+================
+
