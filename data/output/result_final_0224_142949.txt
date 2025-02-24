@@ -1,0 +1,45 @@
+=====Result (Current)=====
+POI: 160 | Tenure: 10
+avg soln: 10372.53
+dif: 13.48
+avg time: 3.46
+================
+
+POI: 160 | Tenure: 20
+avg soln: 10372.53
+dif: 13.48
+avg time: 3.5
+================
+
+POI: 160 | Tenure: 40
+avg soln: 10372.53
+dif: 13.48
+avg time: 3.58
+================
+
+=====Result (Perturbation)=====
+POI: 160 | Tenure: 10
+avg soln: 10151.35
+dif: 19.5
+avg time: 14.43
+================
+
+POI: 160 | Tenure: 20
+avg soln: 10151.35
+dif: 19.5
+avg time: 15.03
+================
+
+POI: 160 | Tenure: 40
+avg soln: 10151.35
+dif: 19.5
+avg time: 14.64
+================
+
+=====Result (Adaptive Tenure)=====
+POI: 160
+avg soln: 10151.35
+dif: 19.5
+avg time: 15.42
+================
+

@@ -15,10 +15,10 @@ def neighborhood(soln: list[int], tabu_list: list[list[int]]) -> list[list[int]]
     Raises:
     """
     nbhd: list = []
-    #for i in range(len(soln)):
-    for i in range(int(len(soln)/2)):
-        #for j in range(i + 1, len(soln)):
-        for j in range(i + 1, int(len(soln)/2)):
+
+    # Make sure the last element is the same as the first element
+    for i in range(len(soln) - 1):
+        for j in range(i + 1, len(soln) - 1):
             soln_mod: list[int] = soln.copy()
             soln_mod[i], soln_mod[j] = soln_mod[j], soln_mod[i]
             soln_mod[-1] = soln_mod[0]
@@ -45,7 +45,7 @@ def val(soln: list[int]) -> int:
 
 
 def best_admissible_soln(
-    nbhd: list[list[int]], tabu_list: list[list[int]] 
+    nbhd: list[list[int]], tabu_list: list[list[int]]
 ) -> list[int]:
     """Finds the best admissible solution. It must be better than current
     solution and doesn't exist in tabu list.
@@ -56,7 +56,7 @@ def best_admissible_soln(
         nbhr_best: Best admissible neighbor in the neighborhood
     Raises:
     """
-    val_best: int = 100000  # Starts with large value to accept 1st neighbor
+    val_best: int = float("inf")  # Starts with large value to accept 1st neighbor
     nbhr_best: list[int] = None
 
     for nbhr_curr in nbhd:

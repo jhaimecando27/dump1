@@ -1,5 +1,5 @@
-from .utils import adaptive_perturb
-from algorithms.utils import neighborhood, val, best_admissible_soln
+from .utils import adaptive_perturb, neighborhood
+from algorithms.utils import val, best_admissible_soln
 
 
 def tabu_search_with_perturbation(
@@ -15,7 +15,8 @@ def tabu_search_with_perturbation(
     soln_best_tracker = []
 
     for iter_ctr in range(iter_max):
-        nbhd = neighborhood(soln_curr, tabu_list)
+        intensity = 1.0 - (stagnant_ctr * 0.1)
+        nbhd = neighborhood(soln_curr, tabu_list, intensity)
         nbhr_best = best_admissible_soln(nbhd, tabu_list)
 
         if val(nbhr_best) < val(soln_best):

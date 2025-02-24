@@ -1,0 +1,62 @@
+0224_142355
+=====Result=====
+POI: 160 | Tenure: 10
+avg soln: 10833.67
+dif: 13.38
+avg best: 10231.17
+dif best: 0.0
+avg time: 3.5
+================
+
+POI: 160 | Tenure: 20
+avg soln: 10833.67
+dif: 13.38
+avg best: 10231.17
+dif best: 0.0
+avg time: 3.48
+================
+
+POI: 160 | Tenure: 40
+avg soln: 10833.67
+dif: 13.38
+avg best: 10231.17
+dif best: 0.0
+avg time: 3.54
+================
+
+0224_142355
+=====Result (Perturbation)=====
+POI: 160 | Tenure: 10
+avg soln: 10833.67
+dif: 13.38
+avg best: 10231.17
+dif best: 0.0
+avg time: 3.53
+================
+
+POI: 160 | Tenure: 20
+avg soln: 10833.67
+dif: 13.38
+avg best: 10231.17
+dif best: 0.0
+avg time: 3.52
+================
+
+POI: 160 | Tenure: 40
+avg soln: 10833.67
+dif: 13.38
+avg best: 10231.17
+dif best: 0.0
+avg time: 3.55
+================
+
+0224_142355
+=====Result (Adaptive Tenure)=====
+POI: 160 
+avg soln: 10833.67
+dif: 13.38
+avg best: 10231.17
+dif best: 0.0
+avg time: 3.53
+================
+

@@ -1,0 +1,62 @@
+0224_151644
+=====Result=====
+POI: 80 | Tenure: 10
+avg soln: 2877.82
+dif: 50.13
+avg best: 2386.52
+dif best: 0.0
+avg time: 1.01
+================
+
+POI: 80 | Tenure: 20
+avg soln: 2877.82
+dif: 50.13
+avg best: 2386.52
+dif best: 0.0
+avg time: 1.04
+================
+
+POI: 80 | Tenure: 40
+avg soln: 2877.82
+dif: 50.13
+avg best: 2386.52
+dif best: 0.0
+avg time: 1.24
+================
+
+0224_151644
+=====Result (Perturbation)=====
+POI: 80 | Tenure: 10
+avg soln: 2877.82
+dif: 50.13
+avg best: 2386.52
+dif best: 0.0
+avg time: 1.06
+================
+
+POI: 80 | Tenure: 20
+avg soln: 2877.82
+dif: 50.13
+avg best: 2386.52
+dif best: 0.0
+avg time: 1.08
+================
+
+POI: 80 | Tenure: 40
+avg soln: 2877.82
+dif: 50.13
+avg best: 2386.52
+dif best: 0.0
+avg time: 1.12
+================
+
+0224_151644
+=====Result (Adaptive Tenure)=====
+POI: 80 
+avg soln: 2877.82
+dif: 50.13
+avg best: 2386.52
+dif best: 0.0
+avg time: 1.08
+================
+

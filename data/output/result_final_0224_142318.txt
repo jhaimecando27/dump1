@@ -1,0 +1,62 @@
+0224_142318
+=====Result=====
+POI: 20 | Tenure: 10
+avg soln: 1078.29
+dif: 21.12
+avg best: 1008.82
+dif best: 0.0
+avg time: 0.01
+================
+
+POI: 20 | Tenure: 20
+avg soln: 1078.29
+dif: 21.12
+avg best: 1008.82
+dif best: 0.0
+avg time: 0.01
+================
+
+POI: 20 | Tenure: 40
+avg soln: 1078.29
+dif: 21.12
+avg best: 1008.82
+dif best: 0.0
+avg time: 0.01
+================
+
+0224_142318
+=====Result (Perturbation)=====
+POI: 20 | Tenure: 10
+avg soln: 1078.29
+dif: 21.12
+avg best: 1008.82
+dif best: 0.0
+avg time: 0.01
+================
+
+POI: 20 | Tenure: 20
+avg soln: 1078.29
+dif: 21.12
+avg best: 1008.82
+dif best: 0.0
+avg time: 0.01
+================
+
+POI: 20 | Tenure: 40
+avg soln: 1078.29
+dif: 21.12
+avg best: 1008.82
+dif best: 0.0
+avg time: 0.01
+================
+
+0224_142318
+=====Result (Adaptive Tenure)=====
+POI: 20 
+avg soln: 1078.29
+dif: 21.12
+avg best: 1008.82
+dif best: 0.0
+avg time: 0.01
+================
+

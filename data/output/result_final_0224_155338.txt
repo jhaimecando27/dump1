@@ -1,0 +1,62 @@
+0224_155338
+=====Result=====
+POI: 80 | Tenure: 10
+avg soln: 3140.27
+dif: 51.57
+avg best: 2545.22
+dif best: 0.0
+avg time: 1.04
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3140.27
+dif: 51.57
+avg best: 2545.22
+dif best: 0.0
+avg time: 1.03
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3140.27
+dif: 51.57
+avg best: 2545.22
+dif best: 0.0
+avg time: 1.02
+================
+
+0224_155338
+=====Result (Perturbation)=====
+POI: 80 | Tenure: 10
+avg soln: 3300.16
+dif: 40.24
+avg best: 2788.27
+dif best: 0.0
+avg time: 3.23
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3300.16
+dif: 40.24
+avg best: 2788.27
+dif best: 0.0
+avg time: 3.25
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3300.16
+dif: 40.24
+avg best: 2788.27
+dif best: 0.0
+avg time: 3.4
+================
+
+0224_155338
+=====Result (Adaptive Tenure)=====
+POI: 80 
+avg soln: 3140.27
+dif: 51.57
+avg best: 2545.22
+dif best: 0.0
+avg time: 1.23
+================
+

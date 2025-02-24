@@ -1,116 +1,86 @@
-0223_142550
-=====Result=====
+=====Result (Current)=====
 POI: 20 | Tenure: 10
 avg soln: 563.35
 dif: 116.49
-avg best: 379.15
-dif best: 0.0
 avg time: 0.02
 ================
 
 POI: 20 | Tenure: 20
 avg soln: 563.35
 dif: 116.49
-avg best: 379.15
-dif best: 0.0
 avg time: 0.02
 ================
 
 POI: 20 | Tenure: 40
 avg soln: 563.35
 dif: 116.49
-avg best: 379.15
-dif best: 0.0
 avg time: 0.02
 ================
 
 POI: 40 | Tenure: 10
 avg soln: 1134.61
 dif: 70.44
-avg best: 885.3
-dif best: 0.0
 avg time: 0.13
 ================
 
 POI: 40 | Tenure: 20
 avg soln: 1134.61
 dif: 70.44
-avg best: 885.3
-dif best: 0.0
 avg time: 0.13
 ================
 
 POI: 40 | Tenure: 40
 avg soln: 1134.61
 dif: 70.44
-avg best: 885.3
-dif best: 0.0
 avg time: 0.13
 ================
 
 POI: 80 | Tenure: 10
 avg soln: 2865.95
 dif: 59.12
-avg best: 2308.41
-dif best: 0.0
 avg time: 1.07
 ================
 
 POI: 80 | Tenure: 20
 avg soln: 2865.95
 dif: 59.12
-avg best: 2308.41
-dif best: 0.0
 avg time: 1.03
 ================
 
 POI: 80 | Tenure: 40
 avg soln: 2865.95
 dif: 59.12
-avg best: 2308.41
-dif best: 0.0
 avg time: 1.03
 ================
 
-0223_142550
 =====Result (Perturbation)=====
 POI: 20 | Tenure: 10
 avg soln: 563.35
 dif: 116.49
-avg best: 379.15
-dif best: 0.0
 avg time: 0.02
 ================
 
 POI: 20 | Tenure: 20
 avg soln: 563.35
 dif: 116.49
-avg best: 379.15
-dif best: 0.0
 avg time: 0.02
 ================
 
 POI: 20 | Tenure: 40
 avg soln: 563.35
 dif: 116.49
-avg best: 379.15
-dif best: 0.0
 avg time: 0.02
 ================
 
 POI: 40 | Tenure: 10
 avg soln: 1134.61
 dif: 70.44
-avg best: 885.3
-dif best: 0.0
 avg time: 0.13
 ================
 
 POI: 40 | Tenure: 20
 avg soln: 1134.61
 dif: 70.44
-avg best: 885.3
-dif best: 0.0
 avg time: 0.13
 ================
 
@@ -146,29 +116,22 @@ dif best: 0.0
 avg time: 1.05
 ================
 
-0223_142550
 =====Result (Adaptive Tenure)=====
-POI: 20 
+POI: 20
 avg soln: 563.35
 dif: 116.49
-avg best: 379.15
-dif best: 0.0
 avg time: 0.02
 ================
 
-POI: 40 
+POI: 40
 avg soln: 1134.61
 dif: 70.44
-avg best: 885.3
-dif best: 0.0
 avg time: 0.13
 ================
 
-POI: 80 
+POI: 80
 avg soln: 2865.95
 dif: 59.12
-avg best: 2308.41
-dif best: 0.0
 avg time: 1.02
 ================
 
