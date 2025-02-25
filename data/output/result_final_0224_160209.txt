@@ -1,0 +1,62 @@
+0224_160209
+=====Result=====
+POI: 80 | Tenure: 10
+avg soln: 3210.04
+dif: 49.78
+avg best: 2618.93
+dif best: 0.0
+avg time: 1.0
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3210.04
+dif: 49.78
+avg best: 2618.93
+dif best: 0.0
+avg time: 1.01
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3210.04
+dif: 49.78
+avg best: 2618.93
+dif best: 0.0
+avg time: 1.01
+================
+
+0224_160209
+=====Result (Perturbation)=====
+POI: 80 | Tenure: 10
+avg soln: 3453.79
+dif: 36.58
+avg best: 2949.52
+dif best: 0.0
+avg time: 3.14
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3453.79
+dif: 36.58
+avg best: 2949.52
+dif best: 0.0
+avg time: 3.13
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3453.79
+dif: 36.58
+avg best: 2949.52
+dif best: 0.0
+avg time: 3.15
+================
+
+0224_160209
+=====Result (Adaptive Tenure)=====
+POI: 80
+avg soln: 3210.04
+dif: 49.78
+avg best: 2618.93
+dif best: 0.0
+avg time: 1.03
+================
+

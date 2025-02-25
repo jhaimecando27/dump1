@@ -1,0 +1,55 @@
+0224_174452
+=====Result (Current)=====
+POI: 80 | Tenure: 10
+avg soln: 3021.44
+dif: 50.61
+avg time: 0.99
+std dev: 413.49
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3021.44
+dif: 50.61
+avg time: 1.0
+std dev: 413.49
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3021.44
+dif: 50.61
+avg time: 1.01
+std dev: 413.49
+================
+
+0224_174452
+=====Result (Perturbation)=====
+POI: 80 | Tenure: 10
+avg soln: 3170.17
+dif: 46.69
+avg time: 3.1
+std dev: 394.99
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3170.17
+dif: 46.69
+avg time: 3.13
+std dev: 394.99
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3170.17
+dif: 46.69
+avg time: 3.13
+std dev: 394.99
+================
+
+0224_174452
+=====Result (Adaptive Tenure)=====
+POI: 80 
+avg soln: 3021.44
+dif: 50.61
+avg time: 1.03
+std dev: 413.49
+================
+

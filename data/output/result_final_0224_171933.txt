@@ -1,0 +1,46 @@
+0224_171933
+=====Result (Current)=====
+POI: 80 | Tenure: 10
+avg soln: 3277.77
+dif: 52.65
+avg time: 1.0
+std dev: 451.28
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3277.77
+dif: 52.65
+avg time: 1.04
+std dev: 451.28
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3277.77
+dif: 52.65
+avg time: 1.07
+std dev: 451.28
+================
+
+0224_171933
+=====Result (Perturbation)=====
+POI: 80 | Tenure: 10
+avg soln: 3489.94
+dif: 38.33
+avg time: 3.09
+std dev: 361.71
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3489.94
+dif: 38.33
+avg time: 3.06
+std dev: 361.71
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3489.94
+dif: 38.33
+avg time: 3.09
+std dev: 361.71
+================
+

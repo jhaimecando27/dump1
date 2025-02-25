@@ -2,6 +2,48 @@ import numpy as np
 import math
 
 
+def wave_perturb(
+    solution: list[int], amplitude: float, frequency: float, stagnation: int
+) -> list[int]:
+    """
+    Enhanced wave perturbation with adaptive intensity and selective disruption
+    """
+    import math
+
+    perturbed = solution.copy()
+    n = len(perturbed)
+
+    # Dynamic parameters based on problem size and stagnation
+    base_intensity = min(0.3, 0.1 + (n / 1000))  # Scales with problem size
+    stagnation_factor = min(0.5, stagnation / 20)  # Caps at 0.5
+    intensity = base_intensity + stagnation_factor
+
+    # Modulated wave parameters
+    phase_shift = (stagnation % 6) * math.pi / 3
+    wave_complexity = 1 + (
+        stagnation // 10
+    )  # Increases wave complexity with stagnation
+
+    # Apply selective perturbation
+    for i in range(n - 1):
+        # Complex wave pattern
+        wave = 0
+        for harmonic in range(wave_complexity):
+            wave += (amplitude / (harmonic + 1)) * math.sin(
+                frequency * (harmonic + 1) * i * 2 * math.pi / n + phase_shift
+            )
+
+        if abs(wave) > 0.2 * intensity:  # Threshold scales with intensity
+            swap_distance = max(1, int(abs(wave * n * intensity / 3)))
+            swap_idx = (i + swap_distance) % (n - 1)
+            if i != swap_idx:
+                perturbed[i], perturbed[swap_idx] = perturbed[swap_idx], perturbed[i]
+
+    # Maintain cycle closure
+    perturbed[-1] = perturbed[0]
+    return perturbed
+
+
 def adaptive_perturb(
     soln: list[int],
     stagnant_ctr: int,
@@ -37,72 +79,78 @@ def adaptive_perturb(
     return remaining
 
 
-def dynamic_tenure(tabu_tenure, convergence_rate, stagnant_ctr, poi_len):
-
-    baseline_tenure = math.floor(poi_len * 0.10)
-
-    # stagnation_threshold = math.ceil(len(soln_init) * 0.10)  # Dynamic threshold
-    stagnation_threshold = 5
-
-    adjustment = calculate_adjustment(convergence_rate)
-
-    # Reset
-    if stagnant_ctr == 0:
-        return baseline_tenure
-
-    # No improvement
-    elif stagnant_ctr > 0 and stagnant_ctr < stagnation_threshold:
-        return min(
-            math.floor(poi_len / 2),
-            tabu_tenure + adjustment,
-        )
-
-    # Continues no improvement
-    elif stagnant_ctr >= stagnation_threshold:
-        return min(
-            math.floor(poi_len / 2),
-            tabu_tenure + adjustment + int(stagnant_ctr / 2),
-        )
-
-
-def calculate_adjustment(convergence_rate: float) -> int:
-    if convergence_rate >= 0.9:
-        return 2
-    else:
-        return 1
-
-
-def neighborhood(soln: list[int], tabu_list: list[list[int]], intensity: float = 1.0) -> list[list[int]]:
+def neighborhood(
+    soln: list[int], tabu_list: list[tuple], intensity: float = 1.0
+) -> tuple[list[list[int]], list[tuple]]:
     """Generates neighborhood of new solution from selected solution by
     making small changes.
     Args:
         soln: The current solution passed
-        tabu_list: List of recent solutions
+        tabu_list: List of recent moves (tuples specifying move type and indices)
+        intensity: Parameter to control neighborhood size (higher = more moves)
     Returns:
         nbhd: list of new solutions
-    Raises:
+        moves: list of moves that generated each solution
     """
     nbhd: list = []
+    moves: list = []  # Store the moves that generated each neighbor
     n = len(soln) - 1  # Exclude last element as it should match first
 
-    # 2-opt
+    # 2-opt moves
     for i in range(n - 1):
         for j in range(i + 1, n):
-            soln_mod: list[int] = soln.copy()
-            soln_mod[i:j] = reversed(soln_mod[i:j])
-            soln_mod[-1] = soln_mod[0]
-            if soln_mod not in tabu_list:
+            # Check if this 2-opt move is in the tabu list
+            # 2-opt moves are stored as ('2opt', i, j)
+            if ('2opt', i, j) not in tabu_list and ('2opt', j, i) not in tabu_list:
+                soln_mod: list[int] = soln.copy()
+                soln_mod[i:j+1] = reversed(soln_mod[i:j+1])  # Fixed the slicing
+                soln_mod[-1] = soln_mod[0]  # Ensure last element matches first
                 nbhd.append(soln_mod)
+                moves.append(('2opt', i, j))  # Store the move type and indices
 
+    # Insertion moves (if intensity is high enough)
     if intensity > 0.5:
         for i in range(n):
             for j in range(n):
                 if i != j:
-                    soln_mod: list[int] = soln.copy()
-                    value = soln_mod.pop(i)
-                    soln_mod.insert(j, value)
-                    soln_mod[-1] = soln_mod[0]
-                    if soln_mod not in tabu_list:
+                    # Check if this insertion move is in the tabu list
+                    # Insertion moves are stored as ('ins', i, j)
+                    if ('ins', i, j) not in tabu_list:
+                        soln_mod: list[int] = soln.copy()
+                        value = soln_mod.pop(i)
+                        soln_mod.insert(j, value)
+                        soln_mod[-1] = soln_mod[0]  # Ensure last element matches first
                         nbhd.append(soln_mod)
+                        moves.append(('ins', i, j))  # Store the move type and indices
 
-    return nbhd
+    return nbhd, moves
+
+
+def update_quantum_state(state: float, phase: float, progress: float) -> float:
+    """
+    Updates quantum state using interference patterns.
+    """
+    # Quantum walk-inspired state update
+    new_state = state + phase * math.sin(math.pi * progress)
+    return max(0.1, min(0.9, new_state))  # Bound between 0.1 and 0.9
+
+
+def calculate_phase_shift(improvement: float, prev_value: float) -> float:
+    """
+    Calculates phase shift based on improvement magnitude.
+    """
+    relative_improvement = improvement / prev_value if prev_value else 0
+    return math.tanh(relative_improvement)  # Bounded between -1 and 1
+
+
+def calculate_quantum_tenure(base: int, state: float, n: int) -> int:
+    """
+    Calculates tenure using quantum state probability distribution.
+    """
+    # Create quantum-inspired probability distribution
+    min_tenure = max(2, math.floor(n * 0.05))
+    max_tenure = min(n - 1, math.floor(n * 0.3))
+
+    # Use quantum state to determine tenure
+    tenure = min_tenure + math.floor((max_tenure - min_tenure) * state)
+    return tenure

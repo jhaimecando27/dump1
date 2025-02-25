@@ -1,0 +1,65 @@
+
+=====Result (Perturbation)=====
+POI: 20 | Tenure: 10
+avg soln: 551.58
+dif: 130.22
+avg time: 0.09
+std dev: 168.62
+================
+
+POI: 20 | Tenure: 20
+avg soln: 551.58
+dif: 130.22
+avg time: 0.09
+std dev: 168.62
+================
+
+POI: 20 | Tenure: 40
+avg soln: 551.58
+dif: 130.22
+avg time: 0.09
+std dev: 168.62
+================
+
+POI: 40 | Tenure: 10
+avg soln: 1369.53
+dif: 87.47
+avg time: 0.76
+std dev: 280.55
+================
+
+POI: 40 | Tenure: 20
+avg soln: 1369.53
+dif: 87.47
+avg time: 0.76
+std dev: 280.55
+================
+
+POI: 40 | Tenure: 40
+avg soln: 1369.53
+dif: 87.47
+avg time: 0.73
+std dev: 280.55
+================
+
+POI: 80 | Tenure: 10
+avg soln: 3153.4
+dif: 47.16
+avg time: 6.17
+std dev: 391.69
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3153.4
+dif: 47.16
+avg time: 6.15
+std dev: 391.69
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3153.4
+dif: 47.16
+avg time: 6.16
+std dev: 391.69
+================
+

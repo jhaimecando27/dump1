@@ -1,0 +1,153 @@
+
+=====Result (Adaptive Tenure)=====
+POI: 20 
+avg soln: 586.82
+dif: 39.68
+avg time: 0.01
+std dev: 78.75
+================
+
+POI: 80 
+avg soln: 3314.43
+dif: 28.93
+avg time: 1.02
+std dev: 304.48
+================
+
+POI: 160 
+avg soln: 7135.88
+dif: 12.8
+avg time: 8.28
+std dev: 311.39
+================
+
+
+=====Result (Current)=====
+POI: 20 | Tenure: 10
+avg soln: 586.82
+dif: 39.68
+avg time: 0.01
+std dev: 78.75
+================
+
+POI: 20 | Tenure: 20
+avg soln: 586.82
+dif: 39.68
+avg time: 0.01
+std dev: 78.75
+================
+
+POI: 20 | Tenure: 40
+avg soln: 586.82
+dif: 39.68
+avg time: 0.01
+std dev: 78.75
+================
+
+POI: 80 | Tenure: 10
+avg soln: 3314.43
+dif: 28.93
+avg time: 1.02
+std dev: 304.48
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3314.43
+dif: 28.93
+avg time: 1.01
+std dev: 304.48
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3314.43
+dif: 28.93
+avg time: 1.02
+std dev: 304.48
+================
+
+POI: 160 | Tenure: 10
+avg soln: 7135.88
+dif: 12.8
+avg time: 8.47
+std dev: 311.39
+================
+
+POI: 160 | Tenure: 20
+avg soln: 7135.88
+dif: 12.8
+avg time: 8.4
+std dev: 311.39
+================
+
+POI: 160 | Tenure: 40
+avg soln: 7135.88
+dif: 12.8
+avg time: 8.92
+std dev: 311.39
+================
+
+
+=====Result (Perturbation)=====
+POI: 20 | Tenure: 10
+avg soln: 599.72
+dif: 32.96
+avg time: 0.05
+std dev: 61.12
+================
+
+POI: 20 | Tenure: 20
+avg soln: 599.72
+dif: 32.96
+avg time: 0.05
+std dev: 61.12
+================
+
+POI: 20 | Tenure: 40
+avg soln: 599.72
+dif: 32.96
+avg time: 0.05
+std dev: 61.12
+================
+
+POI: 80 | Tenure: 10
+avg soln: 3541.87
+dif: 19.26
+avg time: 3.13
+std dev: 226.05
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3541.87
+dif: 19.26
+avg time: 3.12
+std dev: 226.05
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3541.87
+dif: 19.26
+avg time: 3.14
+std dev: 226.05
+================
+
+POI: 160 | Tenure: 10
+avg soln: 7336.04
+dif: 9.0
+avg time: 25.41
+std dev: 227.48
+================
+
+POI: 160 | Tenure: 20
+avg soln: 7336.04
+dif: 9.0
+avg time: 25.55
+std dev: 227.48
+================
+
+POI: 160 | Tenure: 40
+avg soln: 7336.04
+dif: 9.0
+avg time: 25.61
+std dev: 227.48
+================
+

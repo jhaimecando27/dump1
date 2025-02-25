@@ -2,6 +2,8 @@ import sys
 import time
 import os
 
+from statistics import mean, stdev
+
 import config
 
 from datetime import datetime
@@ -54,27 +56,32 @@ def run_simulation():
             list_soln_best.sort()
 
             # Calculate
-            avg_soln = round(sum(soln_lst) / len(soln_lst), 2)
-            dif_soln = round(((soln_lst[-1] - soln_lst[0]) / soln_lst[0]) * 100, 2)
-            avg_best = round(sum(list_soln_best) / len(list_soln_best), 2)
-            dif_best = round(
-                ((list_soln_best[-1] - list_soln_best[0]) / list_soln_best[0]) * 100, 2
-            )
-            avg_time = round(sum(list_time) / len(list_time), 2)
+            avg_soln = round(mean(soln_lst), 2)
+            best_soln = round(min(soln_lst), 2)
+            worst_soln = round(max(soln_lst), 2)
+
+            # Relative differences and improvements
+            dif_soln = round(((worst_soln - best_soln) / best_soln) * 100, 2)
+
+            # Time statistics
+            avg_time = round(mean(list_time), 2)
+
+            # Additional statistics if needed
+            std_dev = round(stdev(soln_lst), 2) if len(soln_lst) > 1 else 0
 
             # Store results
             output += f"POI: {config.pois[n]} | Tenure: {config.tenures[j]}\n"
             output += f"avg soln: {avg_soln}\n"
             output += f"dif: {dif_soln}\n"
-            output += f"avg best: {avg_best}\n"
-            output += f"dif best: {dif_best}\n"
             output += f"avg time: {avg_time}\n"
+            output += f"std dev: {std_dev}\n"
             output += "================\n\n"
 
     print()
     print("\nFinished\n\n")
+    print(output)
 
-    final_output += current_timestamp + "\n=====Result=====\n" + output
+    final_output += "\n=====Result (Current)=====\n" + output
 
 
 def run_simulation2():
@@ -117,27 +124,32 @@ def run_simulation2():
             list_soln_best.sort()
 
             # Calculate
-            avg_soln = round(sum(soln_lst) / len(soln_lst), 2)
-            dif_soln = round(((soln_lst[-1] - soln_lst[0]) / soln_lst[0]) * 100, 2)
-            avg_best = round(sum(list_soln_best) / len(list_soln_best), 2)
-            dif_best = round(
-                ((list_soln_best[-1] - list_soln_best[0]) / list_soln_best[0]) * 100, 2
-            )
-            avg_time = round(sum(list_time) / len(list_time), 2)
+            avg_soln = round(mean(soln_lst), 2)
+            best_soln = round(min(soln_lst), 2)
+            worst_soln = round(max(soln_lst), 2)
+
+            # Relative differences and improvements
+            dif_soln = round(((worst_soln - best_soln) / best_soln) * 100, 2)
+
+            # Time statistics
+            avg_time = round(mean(list_time), 2)
+
+            # Additional statistics if needed
+            std_dev = round(stdev(soln_lst), 2) if len(soln_lst) > 1 else 0
 
             # Store results
             output += f"POI: {config.pois[n]} | Tenure: {config.tenures[j]}\n"
             output += f"avg soln: {avg_soln}\n"
             output += f"dif: {dif_soln}\n"
-            output += f"avg best: {avg_best}\n"
-            output += f"dif best: {dif_best}\n"
             output += f"avg time: {avg_time}\n"
+            output += f"std dev: {std_dev}\n"
             output += "================\n\n"
 
     print()
     print("\nFinished")
+    print(output)
 
-    final_output += current_timestamp + "\n=====Result (Perturbation)=====\n" + output
+    final_output += "\n=====Result (Perturbation)=====\n" + output
 
 
 def run_simulation3():
@@ -178,38 +190,43 @@ def run_simulation3():
         list_soln_best.sort()
 
         # Calculate
-        avg_soln = round(sum(soln_lst) / len(soln_lst), 2)
-        dif_soln = round(((soln_lst[-1] - soln_lst[0]) / soln_lst[0]) * 100, 2)
-        avg_best = round(sum(list_soln_best) / len(list_soln_best), 2)
-        dif_best = round(
-            ((list_soln_best[-1] - list_soln_best[0]) / list_soln_best[0]) * 100, 2
-        )
-        avg_time = round(sum(list_time) / len(list_time), 2)
+        avg_soln = round(mean(soln_lst), 2)
+        best_soln = round(min(soln_lst), 2)
+        worst_soln = round(max(soln_lst), 2)
+
+        # Relative differences and improvements
+        dif_soln = round(((worst_soln - best_soln) / best_soln) * 100, 2)
+
+        # Time statistics
+        avg_time = round(mean(list_time), 2)
+
+        # Additional statistics if needed
+        std_dev = round(stdev(soln_lst), 2) if len(soln_lst) > 1 else 0
 
         # Store results
         output += f"POI: {config.pois[n]} \n"
         output += f"avg soln: {avg_soln}\n"
         output += f"dif: {dif_soln}\n"
-        output += f"avg best: {avg_best}\n"
-        output += f"dif best: {dif_best}\n"
         output += f"avg time: {avg_time}\n"
+        output += f"std dev: {std_dev}\n"
         output += "================\n\n"
 
     print()
     print("\nFinished")
+    print(output)
 
-    final_output += current_timestamp + "\n=====Result (Adaptive Tenure)=====\n" + output
+    final_output += "\n=====Result (Adaptive Tenure)=====\n" + output
 
 
 if __name__ == "__main__":
+    run_simulation3()
     run_simulation()
     run_simulation2()
-    run_simulation3()
 
     output_dir = os.path.join(os.path.dirname(__file__), "data", "output")
     os.makedirs(output_dir, exist_ok=True)
 
-    output_file_name = f"result_final_{current_timestamp}.txt"
+    output_file_name = f"rf_{current_timestamp}.txt"
     output_file_path = os.path.join(output_dir, output_file_name)
 
     with open(output_file_path, "w", encoding="utf-8") as file:

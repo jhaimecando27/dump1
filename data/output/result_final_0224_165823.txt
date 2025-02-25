@@ -1,0 +1,37 @@
+=====Result (current)=====
+POI: 80 | Tenure: 10
+avg soln: 3441.74
+dif: 52.81
+avg time: 0.97
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3441.74
+dif: 52.81
+avg time: 0.98
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3441.74
+dif: 52.81
+avg time: 0.99
+================
+
+=====Result (Perturbation)=====
+POI: 80 | Tenure: 10
+avg soln: 3622.81
+dif: 40.56
+avg time: 3.04
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3622.81
+dif: 40.56
+avg time: 3.07
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3622.81
+dif: 40.56
+avg time: 3.06
+================

@@ -1,0 +1,38 @@
+=====Result=====
+POI: 160 | Tenure: 10
+avg soln: 7317.44
+dif: 28.07
+avg time: 8.62
+================
+
+POI: 160 | Tenure: 20
+avg soln: 7317.44
+dif: 28.07
+avg time: 8.61
+================
+
+POI: 160 | Tenure: 40
+avg soln: 7317.44
+dif: 28.07
+avg time: 8.61
+================
+
+0224_161959
+=====Result (Perturbation)=====
+POI: 160 | Tenure: 10
+avg soln: 7640.01
+dif: 19.32
+avg time: 25.44
+================
+
+POI: 160 | Tenure: 20
+avg soln: 7640.01
+dif: 19.32
+avg time: 25.58
+================
+
+POI: 160 | Tenure: 40
+avg soln: 7640.01
+dif: 19.32
+avg time: 25.37
+================

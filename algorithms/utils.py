@@ -6,7 +6,7 @@ import config
 
 def neighborhood(soln: list[int], tabu_list: list[list[int]]) -> list[list[int]]:
     """Generates neighborhood of new solution from selected solution by
-    making small changes.
+    making small changes. For current tabu search
     Args:
         soln: The current solution passed
         tabu_list: List of recent solutions
@@ -15,15 +15,19 @@ def neighborhood(soln: list[int], tabu_list: list[list[int]]) -> list[list[int]]
     Raises:
     """
     nbhd: list = []
+    moves: list = []
 
     # Make sure the last element is the same as the first element
-    for i in range(len(soln) - 1):
-        for j in range(i + 1, len(soln) - 1):
-            soln_mod: list[int] = soln.copy()
-            soln_mod[i], soln_mod[j] = soln_mod[j], soln_mod[i]
-            soln_mod[-1] = soln_mod[0]
-            nbhd.append(soln_mod)
-    return nbhd
+    n = len(soln) - 1
+    for i in range(n):
+        for j in range(i + 1, n):
+            if (i, j) not in tabu_list and (j, i) not in tabu_list:
+                soln_mod: list[int] = soln.copy()
+                soln_mod[i], soln_mod[j] = soln_mod[j], soln_mod[i]
+                soln_mod[-1] = soln_mod[0]
+                nbhd.append(soln_mod)
+                moves.append((i, j))
+    return nbhd, moves
 
 
 def val(soln: list[int]) -> int:
@@ -45,7 +49,10 @@ def val(soln: list[int]) -> int:
 
 
 def best_admissible_soln(
-    nbhd: list[list[int]], tabu_list: list[list[int]]
+    nbhd: list[list[int]],
+    moves: list[tuple[int, int]],
+    tabu_list: list[list[int]],
+    soln_best: list[int],
 ) -> list[int]:
     """Finds the best admissible solution. It must be better than current
     solution and doesn't exist in tabu list.
@@ -58,12 +65,15 @@ def best_admissible_soln(
     """
     val_best: int = float("inf")  # Starts with large value to accept 1st neighbor
     nbhr_best: list[int] = None
+    move_best: tuple[int, int] = None
 
-    for nbhr_curr in nbhd:
-        if nbhr_curr not in tabu_list:
-            val_curr: int = val(nbhr_curr)
+    for idx, nbhr_curr in enumerate(nbhd):
+        val_curr: int = val(nbhr_curr)
+
+        if val_curr < val(soln_best) or moves[idx] not in tabu_list:
             if val_curr < val_best:
                 val_best = val_curr
                 nbhr_best = nbhr_curr
+                move_best = moves[idx]
 
-    return nbhr_best
+    return nbhr_best, move_best
