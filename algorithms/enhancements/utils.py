@@ -1,5 +1,6 @@
 import numpy as np
 import math
+import random
 
 
 def wave_perturb(
@@ -101,12 +102,12 @@ def neighborhood(
         for j in range(i + 1, n):
             # Check if this 2-opt move is in the tabu list
             # 2-opt moves are stored as ('2opt', i, j)
-            if ('2opt', i, j) not in tabu_list and ('2opt', j, i) not in tabu_list:
+            if ("2opt", i, j) not in tabu_list and ("2opt", j, i) not in tabu_list:
                 soln_mod: list[int] = soln.copy()
-                soln_mod[i:j+1] = reversed(soln_mod[i:j+1])  # Fixed the slicing
+                soln_mod[i : j + 1] = reversed(soln_mod[i : j + 1])  # Fixed the slicing
                 soln_mod[-1] = soln_mod[0]  # Ensure last element matches first
                 nbhd.append(soln_mod)
-                moves.append(('2opt', i, j))  # Store the move type and indices
+                moves.append(("2opt", i, j))  # Store the move type and indices
 
     # Insertion moves (if intensity is high enough)
     if intensity > 0.5:
@@ -115,13 +116,13 @@ def neighborhood(
                 if i != j:
                     # Check if this insertion move is in the tabu list
                     # Insertion moves are stored as ('ins', i, j)
-                    if ('ins', i, j) not in tabu_list:
+                    if ("ins", i, j) not in tabu_list:
                         soln_mod: list[int] = soln.copy()
                         value = soln_mod.pop(i)
                         soln_mod.insert(j, value)
                         soln_mod[-1] = soln_mod[0]  # Ensure last element matches first
                         nbhd.append(soln_mod)
-                        moves.append(('ins', i, j))  # Store the move type and indices
+                        moves.append(("ins", i, j))  # Store the move type and indices
 
     return nbhd, moves
 
@@ -131,8 +132,8 @@ def update_quantum_state(state: float, phase: float, progress: float) -> float:
     Updates quantum state using interference patterns.
     """
     # Quantum walk-inspired state update
-    new_state = state + phase * math.sin(math.pi * progress)
-    return max(0.1, min(0.9, new_state))  # Bound between 0.1 and 0.9
+    new_state = state + phase * (1.0 - progress)  # Amplify effect early
+    return max(0.1, min(0.9, new_state))
 
 
 def calculate_phase_shift(improvement: float, prev_value: float) -> float:
@@ -144,13 +145,23 @@ def calculate_phase_shift(improvement: float, prev_value: float) -> float:
 
 
 def calculate_quantum_tenure(base: int, state: float, n: int) -> int:
-    """
-    Calculates tenure using quantum state probability distribution.
-    """
-    # Create quantum-inspired probability distribution
-    min_tenure = max(2, math.floor(n * 0.05))
-    max_tenure = min(n - 1, math.floor(n * 0.3))
-
-    # Use quantum state to determine tenure
-    tenure = min_tenure + math.floor((max_tenure - min_tenure) * state)
+    min_tenure = max(5, math.floor(n * 0.15))  # Higher minimum
+    max_tenure = math.floor(n * 0.6)  # Wider maximum
+    # Add randomness to tenure calculation
+    tenure = min_tenure + math.floor(
+        (max_tenure - min_tenure) * (state + 0.1 * random.random())
+    )
     return tenure
+
+
+def estimate_improvement_potential(nbhd: list[list[int]], current_val: int) -> float:
+    """
+    Estimates potential for further improvement based on neighborhood structure.
+    """
+    if not nbhd:
+        return 0
+
+    values = [val(n) for n in nbhd]
+    min_val = min(values)
+    improvement = current_val - min_val if min_val < current_val else 0
+    return improvement / current_val if current_val else 0

@@ -1,0 +1,78 @@
+
+=====Result (Momentum)=====
+POI: 500 | Tenure: 10
+avg soln: 246.25
+dif: 4.83
+avg time: 66.64
+std dev: 4.19
+================
+
+POI: 500 | Tenure: 20
+avg soln: 246.25
+dif: 4.83
+avg time: 67.71
+std dev: 4.19
+================
+
+POI: 500 | Tenure: 40
+avg soln: 246.25
+dif: 4.83
+avg time: 66.11
+std dev: 4.19
+================
+
+
+=====Result (Current)=====
+POI: 500 | Tenure: 10
+avg soln: 246.25
+dif: 4.83
+avg time: 300.79
+std dev: 4.19
+================
+
+POI: 500 | Tenure: 20
+avg soln: 246.25
+dif: 4.83
+avg time: 298.89
+std dev: 4.19
+================
+
+POI: 500 | Tenure: 40
+avg soln: 246.25
+dif: 4.83
+avg time: 295.54
+std dev: 4.19
+================
+
+
+=====Result (Perturbation)=====
+POI: 500 | Tenure: 10
+avg soln: 249.61
+dif: 2.99
+avg time: 912.47
+std dev: 2.64
+================
+
+POI: 500 | Tenure: 20
+avg soln: 249.61
+dif: 2.99
+avg time: 925.15
+std dev: 2.64
+================
+
+POI: 500 | Tenure: 40
+avg soln: 249.61
+dif: 2.99
+avg time: 895.82
+std dev: 2.64
+================
+
+
+=====Result (Adaptive Tenure)=====
+POI: 500 
+avg soln: 246.25
+dif: 4.83
+avg time: 273.65
+std dev: 4.19
+================
+

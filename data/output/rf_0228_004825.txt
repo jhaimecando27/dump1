@@ -1,0 +1,23 @@
+
+=====Result (Perturbation)=====
+POI: 40 
+avg soln: 1637.21
+dif: 37.51
+avg time: 0.2
+std dev: 188.52
+================
+
+POI: 80 
+avg soln: 3504.28
+dif: 18.6
+avg time: 1.58
+std dev: 217.89
+================
+
+POI: 160 
+avg soln: 7987.7
+dif: 10.19
+avg time: 13.38
+std dev: 282.04
+================
+

@@ -2,12 +2,13 @@ import pandas as pd
 import numpy as np
 import random
 
-total_iter = 5
+total_iter = 10
 dms = {}
 soln_inits = {}
-pois = ["20", "80", "160"]
-# pois = ["500"]
-tenures = [10, 20, 40]
+#pois = ["20", "80"]
+pois = ["40", "80", "160"]
+#pois = ["500"]
+tenures = [10, 20, 30]
 distance_matrix: list[list[int]] = []
 
 for poi in pois:

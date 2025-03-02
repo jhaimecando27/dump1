@@ -45,7 +45,7 @@ def save_matrix_to_csv_with_headers(matrix, filename):
 
 if __name__ == "__main__":
     # Specify problem size and dimension
-    n_points = 500  # number of cities
+    n_points = 1000  # number of cities
     dimension = 2  # using 2D points
 
     # Create random distance matrix

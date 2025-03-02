@@ -1,0 +1,88 @@
+
+=====Result (Adaptive Tenure)=====
+POI: 20 
+avg soln: 612.66
+dif: 55.04
+avg time: 0.01
+std dev: 102.03
+================
+
+POI: 80 
+avg soln: 3465.27
+dif: 28.43
+avg time: 1.0
+std dev: 315.97
+================
+
+POI: 160 
+avg soln: 7644.44
+dif: 12.93
+avg time: 8.38
+std dev: 336.72
+================
+
+
+=====Result (Current)=====
+POI: 20 | Tenure: 10
+avg soln: 612.66
+dif: 55.04
+avg time: 0.01
+std dev: 102.03
+================
+
+POI: 20 | Tenure: 20
+avg soln: 612.66
+dif: 55.04
+avg time: 0.02
+std dev: 102.03
+================
+
+POI: 20 | Tenure: 40
+avg soln: 612.66
+dif: 55.04
+avg time: 0.02
+std dev: 102.03
+================
+
+POI: 80 | Tenure: 10
+avg soln: 3465.27
+dif: 28.43
+avg time: 1.03
+std dev: 315.97
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3465.27
+dif: 28.43
+avg time: 1.03
+std dev: 315.97
+================
+
+POI: 80 | Tenure: 40
+avg soln: 3465.27
+dif: 28.43
+avg time: 1.04
+std dev: 315.97
+================
+
+POI: 160 | Tenure: 10
+avg soln: 7644.44
+dif: 12.93
+avg time: 8.57
+std dev: 336.72
+================
+
+POI: 160 | Tenure: 20
+avg soln: 7644.44
+dif: 12.93
+avg time: 8.72
+std dev: 336.72
+================
+
+POI: 160 | Tenure: 40
+avg soln: 7644.44
+dif: 12.93
+avg time: 8.7
+std dev: 336.72
+================
+

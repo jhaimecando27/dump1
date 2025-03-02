@@ -7,9 +7,12 @@ from statistics import mean, stdev
 import config
 
 from datetime import datetime
-from algorithms.current import core
+from algorithms.current import core, core1, core2, core3
+
 from algorithms.enhancements import obj1
+from algorithms.enhancements import obj2
 from algorithms.enhancements import obj3
+from algorithms.enhancements import hybrid
 
 final_output = ""
 
@@ -29,6 +32,12 @@ def run_simulation():
 
             for i in range(config.total_iter):
 
+                sys.stdout.write("\r\033[K")
+                sys.stdout.write(
+                    f"\r(STATUS) POI: {n + 1}/{len(config.pois)} | Tenure: {j+1}/{len(config.tenures)} |  run: {i+1}/{config.total_iter}"
+                )
+                sys.stdout.flush()
+
                 s_time = time.perf_counter()
                 soln_best, soln_best_tracker = core.tabu_search(
                     soln_init=config.soln_inits[config.pois[n]],
@@ -40,12 +49,6 @@ def run_simulation():
                 list_soln_best.append(soln_best)
                 list_soln_best_tracker.append(soln_best_tracker)
                 list_time.append(e_time - s_time)
-
-                sys.stdout.write("\r\033[K")
-                sys.stdout.write(
-                    f"\r(STATUS) POI: {n + 1}/{len(config.pois)} | Tenure: {j+1}/{len(config.tenures)} |  run: {i+1}/{config.total_iter}"
-                )
-                sys.stdout.flush()
 
             soln_lst = []
             for run in list_soln_best_tracker:
@@ -89,6 +92,75 @@ def run_simulation2():
     output = ""
 
     for n in range(len(config.pois)):
+
+        list_soln_best: list[int] = []
+        list_soln_best_tracker: list[list[int]] = []
+        list_time: float = []
+
+        for i in range(config.total_iter):
+            sys.stdout.write("\r\033[K")
+            sys.stdout.write(
+                f"\r(STATUS: Enhanced) POI: {n + 1}/{len(config.pois)} |  run: {i+1}/{config.total_iter}"
+            )
+            #sys.stdout.write(
+            #    f"\r(STATUS: Perturbation) POI: {n + 1}/{len(config.pois)} | Tenure: {j+1}/{len(config.tenures)} |  run: {i+1}/{config.total_iter}"
+            #)
+            sys.stdout.flush()
+
+            s_time = time.perf_counter()
+            soln_best, soln_best_tracker = hybrid.tabu_search(
+                soln_init=config.soln_inits[config.pois[n]],
+                iter_max=config.total_iter,
+            )
+            e_time = time.perf_counter()
+
+            list_soln_best.append(soln_best)
+            list_soln_best_tracker.append(soln_best_tracker)
+            list_time.append(e_time - s_time)
+
+        soln_lst = []
+        for run in list_soln_best_tracker:
+            for soln in run:
+                soln_lst.append(soln)
+        soln_lst.sort()
+
+        list_soln_best.sort()
+
+        # Calculate
+        avg_soln = round(mean(soln_lst), 2)
+        best_soln = round(min(soln_lst), 2)
+        worst_soln = round(max(soln_lst), 2)
+
+        # Relative differences and improvements
+        dif_soln = round(((worst_soln - best_soln) / best_soln) * 100, 2)
+
+        # Time statistics
+        avg_time = round(mean(list_time), 2)
+
+        # Additional statistics if needed
+        std_dev = round(stdev(soln_lst), 2) if len(soln_lst) > 1 else 0
+
+        # Store results
+        #output += f"POI: {config.pois[n]} | Tenure: {config.tenures[j]}\n"
+        output += f"POI: {config.pois[n]} \n"
+        output += f"avg soln: {avg_soln}\n"
+        output += f"dif: {dif_soln}\n"
+        output += f"avg time: {avg_time}\n"
+        output += f"std dev: {std_dev}\n"
+        output += "================\n\n"
+
+    print()
+    print("\nFinished")
+    print(output)
+
+    final_output += "\n=====Result (Enhanced)=====\n" + output
+
+
+def run_simulation4():
+    global final_output
+    output = ""
+
+    for n in range(len(config.pois)):
         for j in range(len(config.tenures)):
 
             list_soln_best: list[int] = []
@@ -97,8 +169,14 @@ def run_simulation2():
 
             for i in range(config.total_iter):
 
+                sys.stdout.write("\r\033[K")
+                sys.stdout.write(
+                    f"\r(STATUS: Momentum) POI: {n + 1}/{len(config.pois)} | Tenure: {j+1}/{len(config.tenures)} |  run: {i+1}/{config.total_iter}"
+                )
+                sys.stdout.flush()
+
                 s_time = time.perf_counter()
-                soln_best, soln_best_tracker = obj1.tabu_search_with_perturbation(
+                soln_best, soln_best_tracker = obj2.tabu_search(
                     soln_init=config.soln_inits[config.pois[n]],
                     tabu_tenure=config.tenures[j],
                     iter_max=config.total_iter,
@@ -108,12 +186,6 @@ def run_simulation2():
                 list_soln_best.append(soln_best)
                 list_soln_best_tracker.append(soln_best_tracker)
                 list_time.append(e_time - s_time)
-
-                sys.stdout.write("\r\033[K")
-                sys.stdout.write(
-                    f"\r(STATUS: Perturbation) POI: {n + 1}/{len(config.pois)} | Tenure: {j+1}/{len(config.tenures)} |  run: {i+1}/{config.total_iter}"
-                )
-                sys.stdout.flush()
 
             soln_lst = []
             for run in list_soln_best_tracker:
@@ -146,10 +218,10 @@ def run_simulation2():
             output += "================\n\n"
 
     print()
-    print("\nFinished")
+    print("\nFinished\n\n")
     print(output)
 
-    final_output += "\n=====Result (Perturbation)=====\n" + output
+    final_output += "\n=====Result (Momentum)=====\n" + output
 
 
 def run_simulation3():
@@ -163,6 +235,11 @@ def run_simulation3():
         list_time: float = []
 
         for i in range(config.total_iter):
+            sys.stdout.write("\r\033[K")
+            sys.stdout.write(
+                f"\r(STATUS: Adaptive Tenure) POI: {n + 1}/{len(config.pois)} | run: {i+1}/{config.total_iter}"
+            )
+            sys.stdout.flush()
 
             s_time = time.perf_counter()
             soln_best, soln_best_tracker = obj3.ts_adaptive_tenure(
@@ -174,12 +251,6 @@ def run_simulation3():
             list_soln_best.append(soln_best)
             list_soln_best_tracker.append(soln_best_tracker)
             list_time.append(e_time - s_time)
-
-            sys.stdout.write("\r\033[K")
-            sys.stdout.write(
-                f"\r(STATUS: Adaptive Tenure) POI: {n + 1}/{len(config.pois)} | run: {i+1}/{config.total_iter}"
-            )
-            sys.stdout.flush()
 
         soln_lst = []
         for run in list_soln_best_tracker:
@@ -218,10 +289,218 @@ def run_simulation3():
     final_output += "\n=====Result (Adaptive Tenure)=====\n" + output
 
 
+def run_simulation5():
+    global final_output
+    output = ""
+
+    for n in range(len(config.pois)):
+        for j in range(len(config.tenures)):
+
+            list_soln_best: list[int] = []
+            list_soln_best_tracker: list[list[int]] = []
+            list_time: float = []
+
+            for i in range(config.total_iter):
+
+                sys.stdout.write("\r\033[K")
+                sys.stdout.write(
+                    f"\r(STATUS: Genetic) POI: {n + 1}/{len(config.pois)} | Tenure: {j+1}/{len(config.tenures)} |  run: {i+1}/{config.total_iter}"
+                )
+                sys.stdout.flush()
+
+                s_time = time.perf_counter()
+                soln_best, soln_best_tracker = core1.tabu_search_genetic(
+                    soln_init=config.soln_inits[config.pois[n]],
+                    tabu_tenure=config.tenures[j],
+                    iter_max=config.total_iter,
+                )
+                e_time = time.perf_counter()
+
+                list_soln_best.append(soln_best)
+                list_soln_best_tracker.append(soln_best_tracker)
+                list_time.append(e_time - s_time)
+
+            soln_lst = []
+            for run in list_soln_best_tracker:
+                for soln in run:
+                    soln_lst.append(soln)
+            soln_lst.sort()
+
+            list_soln_best.sort()
+
+            # Calculate
+            avg_soln = round(mean(soln_lst), 2)
+            best_soln = round(min(soln_lst), 2)
+            worst_soln = round(max(soln_lst), 2)
+
+            # Relative differences and improvements
+            dif_soln = round(((worst_soln - best_soln) / best_soln) * 100, 2)
+
+            # Time statistics
+            avg_time = round(mean(list_time), 2)
+
+            # Additional statistics if needed
+            std_dev = round(stdev(soln_lst), 2) if len(soln_lst) > 1 else 0
+
+            # Store results
+            output += f"POI: {config.pois[n]} | Tenure: {config.tenures[j]}\n"
+            output += f"avg soln: {avg_soln}\n"
+            output += f"dif: {dif_soln}\n"
+            output += f"avg time: {avg_time}\n"
+            output += f"std dev: {std_dev}\n"
+            output += "================\n\n"
+
+    print()
+    print("\nFinished\n\n")
+    print(output)
+
+    final_output += "\n=====Result (Genetic)=====\n" + output
+
+
+def run_simulation6():
+    global final_output
+    output = ""
+
+    for n in range(len(config.pois)):
+        for j in range(len(config.tenures)):
+
+            list_soln_best: list[int] = []
+            list_soln_best_tracker: list[list[int]] = []
+            list_time: float = []
+
+            for i in range(config.total_iter):
+
+                sys.stdout.write("\r\033[K")
+                sys.stdout.write(
+                    f"\r(STATUS: Probability) POI: {n + 1}/{len(config.pois)} | Tenure: {j+1}/{len(config.tenures)} |  run: {i+1}/{config.total_iter}"
+                )
+                sys.stdout.flush()
+
+                s_time = time.perf_counter()
+                soln_best, soln_best_tracker = core2.tabu_search(
+                    soln_init=config.soln_inits[config.pois[n]],
+                    tabu_tenure=config.tenures[j],
+                    iter_max=config.total_iter,
+                )
+                e_time = time.perf_counter()
+
+                list_soln_best.append(soln_best)
+                list_soln_best_tracker.append(soln_best_tracker)
+                list_time.append(e_time - s_time)
+
+            soln_lst = []
+            for run in list_soln_best_tracker:
+                for soln in run:
+                    soln_lst.append(soln)
+            soln_lst.sort()
+
+            list_soln_best.sort()
+
+            # Calculate
+            avg_soln = round(mean(soln_lst), 2)
+            best_soln = round(min(soln_lst), 2)
+            worst_soln = round(max(soln_lst), 2)
+
+            # Relative differences and improvements
+            dif_soln = round(((worst_soln - best_soln) / best_soln) * 100, 2)
+
+            # Time statistics
+            avg_time = round(mean(list_time), 2)
+
+            # Additional statistics if needed
+            std_dev = round(stdev(soln_lst), 2) if len(soln_lst) > 1 else 0
+
+            # Store results
+            output += f"POI: {config.pois[n]} | Tenure: {config.tenures[j]}\n"
+            output += f"POI: {config.pois[n]} \n"
+            output += f"avg soln: {avg_soln}\n"
+            output += f"dif: {dif_soln}\n"
+            output += f"avg time: {avg_time}\n"
+            output += f"std dev: {std_dev}\n"
+            output += "================\n\n"
+
+    print()
+    print("\nFinished\n\n")
+    print(output)
+
+    final_output += "\n=====Result (Probability)=====\n" + output
+
+
+def run_simulation7():
+    global final_output
+    output = ""
+
+    for n in range(len(config.pois)):
+
+        list_soln_best: list[int] = []
+        list_soln_best_tracker: list[list[int]] = []
+        list_time: float = []
+
+        for i in range(config.total_iter):
+            sys.stdout.write("\r\033[K")
+            sys.stdout.write(
+                f"\r(STATUS: 10%) POI: {n + 1}/{len(config.pois)} | run: {i+1}/{config.total_iter}"
+            )
+            sys.stdout.flush()
+
+            s_time = time.perf_counter()
+            soln_best, soln_best_tracker = core3.tabu_search(
+                soln_init=config.soln_inits[config.pois[n]],
+                iter_max=config.total_iter,
+            )
+            e_time = time.perf_counter()
+
+            list_soln_best.append(soln_best)
+            list_soln_best_tracker.append(soln_best_tracker)
+            list_time.append(e_time - s_time)
+
+        soln_lst = []
+        for run in list_soln_best_tracker:
+            for soln in run:
+                soln_lst.append(soln)
+        soln_lst.sort()
+
+        list_soln_best.sort()
+
+        # Calculate
+        avg_soln = round(mean(soln_lst), 2)
+        best_soln = round(min(soln_lst), 2)
+        worst_soln = round(max(soln_lst), 2)
+
+        # Relative differences and improvements
+        dif_soln = round(((worst_soln - best_soln) / best_soln) * 100, 2)
+
+        # Time statistics
+        avg_time = round(mean(list_time), 2)
+
+        # Additional statistics if needed
+        std_dev = round(stdev(soln_lst), 2) if len(soln_lst) > 1 else 0
+
+        # Store results
+        output += f"POI: {config.pois[n]} \n"
+        output += f"avg soln: {avg_soln}\n"
+        output += f"dif: {dif_soln}\n"
+        output += f"avg time: {avg_time}\n"
+        output += f"std dev: {std_dev}\n"
+        output += "================\n\n"
+
+    print()
+    print("\nFinished")
+    print(output)
+
+    final_output += "\n=====Result (10%)=====\n" + output
+
+
 if __name__ == "__main__":
-    run_simulation3()
-    run_simulation()
+    #run_simulation()
+
+    #run_simulation6()
+    run_simulation5()
+    #run_simulation7()
+
+    #run_simulation4()
     run_simulation2()
+    #run_simulation3()
 
     output_dir = os.path.join(os.path.dirname(__file__), "data", "output")
     os.makedirs(output_dir, exist_ok=True)
