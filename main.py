@@ -492,11 +492,11 @@ def run_simulation7():
 
 
 if __name__ == "__main__":
-    #run_simulation()
+    run_simulation()
 
-    #run_simulation6()
+    run_simulation6()
     run_simulation5()
-    #run_simulation7()
+    run_simulation7()
 
     #run_simulation4()
     run_simulation2()

@@ -48,8 +48,8 @@ def tabu_search_genetic(
 def neighborhood(soln: list[int], tabu_list) -> list[list[int]]:
     nbhd = []
     n = len(soln) - 1  # Exclude last element (same as first)
-    for i in range(n):
-        for j in range(i + 1, n):
+    for i in range(int(n/2)):
+        for j in range(i + 1, int(n/2)):
             soln_mod = soln.copy()
             soln_mod[i], soln_mod[j] = soln_mod[j], soln_mod[i]
             soln_mod[-1] = soln_mod[0]  # Ensure last element matches first

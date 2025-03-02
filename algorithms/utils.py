@@ -24,8 +24,8 @@ def neighborhood(soln: list[int], tabu_list: list[list[int]]) -> list[list[int]]
 
     # Make sure the last element is the same as the first element
     n = len(soln) - 1
-    for i in range(n):
-        for j in range(i + 1, n):
+    for i in range(int(n/2)):
+        for j in range(i + 1, int(n/2)):
             soln_mod: list[int] = soln.copy()
             soln_mod[i], soln_mod[j] = soln_mod[j], soln_mod[i]
             soln_mod[-1] = soln_mod[0]
@@ -91,15 +91,15 @@ def prob_neighborhood(soln: list[int], tabu_list: list[list[int]]) -> list[list[
 
     n = len(soln) - 1
 
-    node_weights = [i + 1 for i in range(n)]
+    node_weights = [i + 1 for i in range(int(n/2))]
 
-    num_candidates = min(20, n * (n - 1) // 2)
+    num_candidates = int(min(n/2, n * (n - 1) // 2))
 
     for _ in range(num_candidates):
-        i = random.choices(range(n), weights=node_weights, k=1)[0]
-        j_candidates = [j for j in range(n) if j != i]
-        j_weights = [node_weights[j] for j in range(n) if j != i]
-        j = random.choices(j_candidates, weights=j_weights, k=1)[0]
+        i = random.choices(range(int(n/2)), weights=node_weights, k=1)[0]
+        j_candidates = [j for j in range(int(n/2)) if j != i]
+        j_weights = [node_weights[j] for j in range(int(n/2)) if j != i]
+        j = random.choices(j_candidates, weights=j_weights, k=2)[0]
 
         if i > j:
             i, j = j, i
