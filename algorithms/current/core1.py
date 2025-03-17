@@ -17,39 +17,41 @@ def tabu_search_genetic(
     for _ in range(iter_max):
         # Generate initial neighborhood from soln_best via swaps
         initial_nbhd = neighborhood(soln_best, tabu_list[:tabu_tenure])
-        # Sort the initial neighborhood by value
-        initial_nbhd_sorted = sorted(initial_nbhd, key=lambda x: val(x))
-        pop = initial_nbhd_sorted
+        pop = initial_nbhd
+
         # Generate crossover and mutation populations
         pop1 = crossover_population(pop)
         pop2 = mutate_population(pop)
+
         # Combine to form expanded neighborhood
         expanded_nbhd = pop + pop1 + pop2
+
         # Find best admissible solution
         nbhr_best = best_admissible_soln(
-            expanded_nbhd, tabu_list[:tabu_tenure], soln_best
+            expanded_nbhd, tabu_list, soln_best
         )
+
         if nbhr_best is None:
             break  # No admissible solution found
+
         # Update best solution if improved
         current_val = val(nbhr_best)
         if current_val < val(soln_best):
             soln_best = nbhr_best.copy()
             soln_best_tracker.append(current_val)
+
         # Update current solution and tabu list
         soln_curr = nbhr_best.copy()
         tabu_list.append(tuple(soln_curr))
-        # Maintain tabu tenure
-        while len(tabu_list) > tabu_tenure:
-            tabu_list.pop(0)
+
     return val(soln_best), soln_best_tracker
 
 
 def neighborhood(soln: list[int], tabu_list) -> list[list[int]]:
     nbhd = []
     n = len(soln) - 1  # Exclude last element (same as first)
-    for i in range(int(n/2)):
-        for j in range(i + 1, int(n/2)):
+    for i in range(n):
+        for j in range(i + 1, n):
             soln_mod = soln.copy()
             soln_mod[i], soln_mod[j] = soln_mod[j], soln_mod[i]
             soln_mod[-1] = soln_mod[0]  # Ensure last element matches first

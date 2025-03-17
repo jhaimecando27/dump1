@@ -1,0 +1,88 @@
+
+=====Result (Momentum)=====
+POI: 40 | Tenure: 10
+avg soln: 1448.44
+dif: 85.15
+avg time: 0.03
+std dev: 257.28
+================
+
+POI: 40 | Tenure: 20
+avg soln: 1448.73
+dif: 78.66
+avg time: 0.03
+std dev: 255.71
+================
+
+POI: 40 | Tenure: 30
+avg soln: 1447.79
+dif: 76.8
+avg time: 0.03
+std dev: 257.69
+================
+
+POI: 80 | Tenure: 10
+avg soln: 3138.22
+dif: 43.45
+avg time: 0.11
+std dev: 353.37
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3139.01
+dif: 45.02
+avg time: 0.11
+std dev: 352.69
+================
+
+POI: 80 | Tenure: 30
+avg soln: 3137.55
+dif: 43.84
+avg time: 0.11
+std dev: 353.74
+================
+
+POI: 160 | Tenure: 10
+avg soln: 6926.16
+dif: 24.53
+avg time: 0.46
+std dev: 476.17
+================
+
+POI: 160 | Tenure: 20
+avg soln: 6922.64
+dif: 25.36
+avg time: 0.47
+std dev: 479.89
+================
+
+POI: 160 | Tenure: 30
+avg soln: 6927.87
+dif: 24.55
+avg time: 0.47
+std dev: 474.31
+================
+
+
+=====Result (Enhanced)=====
+POI: 40 
+avg soln: 1351.09
+dif: 108.89
+avg time: 0.09
+std dev: 328.28
+================
+
+POI: 80 
+avg soln: 3073.18
+dif: 50.19
+avg time: 0.15
+std dev: 398.25
+================
+
+POI: 160 
+avg soln: 6852.26
+dif: 28.47
+avg time: 0.41
+std dev: 548.0
+================
+

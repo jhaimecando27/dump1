@@ -1,0 +1,26 @@
+
+=====Result (Momentum)=====
+POI: 40 
+avg soln: 1062.26
+dif: 161.76
+avg time: 0.88
+std dev: 247.82
+stagnant best: 4.6
+================
+
+POI: 80 
+avg soln: 2015.3
+dif: 227.49
+avg time: 1.9
+std dev: 607.58
+stagnant best: 25.6
+================
+
+POI: 160 
+avg soln: 3273.24
+dif: 322.72
+avg time: 26.9
+std dev: 1239.75
+stagnant best: 71.2
+================
+

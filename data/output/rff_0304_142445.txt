@@ -1,0 +1,88 @@
+
+=====Result (dynamic chaotic memory distortion)=====
+POI: 40 | Tenure: 10
+avg soln: 1360.42
+dif: 43.59
+avg time: 0.03
+std dev: 219.79
+================
+
+POI: 40 | Tenure: 20
+avg soln: 1355.48
+dif: 43.59
+avg time: 0.03
+std dev: 220.29
+================
+
+POI: 40 | Tenure: 30
+avg soln: 1359.37
+dif: 43.59
+avg time: 0.03
+std dev: 217.82
+================
+
+POI: 80 | Tenure: 10
+avg soln: 3197.57
+dif: 26.24
+avg time: 0.1
+std dev: 357.54
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3198.54
+dif: 26.24
+avg time: 0.1
+std dev: 359.34
+================
+
+POI: 80 | Tenure: 30
+avg soln: 3196.88
+dif: 26.24
+avg time: 0.1
+std dev: 357.88
+================
+
+POI: 160 | Tenure: 10
+avg soln: 7312.59
+dif: 12.41
+avg time: 0.46
+std dev: 503.39
+================
+
+POI: 160 | Tenure: 20
+avg soln: 7311.8
+dif: 12.41
+avg time: 0.46
+std dev: 503.98
+================
+
+POI: 160 | Tenure: 30
+avg soln: 7313.28
+dif: 12.41
+avg time: 0.46
+std dev: 499.81
+================
+
+
+=====Result (other)=====
+POI: 40
+avg soln: 1276.84
+dif: 43.59
+avg time: 0.09
+std dev: 270.4
+================
+
+POI: 80
+avg soln: 3129.24
+dif: 26.07
+avg time: 0.17
+std dev: 426.94
+================
+
+POI: 160
+avg soln: 7182.09
+dif: 11.49
+avg time: 0.44
+std dev: 527.14
+================
+

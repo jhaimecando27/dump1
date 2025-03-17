@@ -76,7 +76,7 @@ def best_admissible_soln(
     for idx, nbhr_curr in enumerate(nbhd):
         val_curr: int = val(nbhr_curr)
 
-        if val_curr < val(soln_best) and moves[idx] not in tabu_list:
+        if moves[idx] not in tabu_list or val_curr < val_best:
             if val_curr < val_best:
                 val_best = val_curr
                 nbhr_best = nbhr_curr
@@ -91,14 +91,14 @@ def prob_neighborhood(soln: list[int], tabu_list: list[list[int]]) -> list[list[
 
     n = len(soln) - 1
 
-    node_weights = [i + 1 for i in range(int(n/2))]
+    node_weights = [i + 1 for i in range(n)]
 
-    num_candidates = int(min(n/2, n * (n - 1) // 2))
+    num_candidates = min(20, n * (n - 1) // 2)
 
     for _ in range(num_candidates):
-        i = random.choices(range(int(n/2)), weights=node_weights, k=1)[0]
-        j_candidates = [j for j in range(int(n/2)) if j != i]
-        j_weights = [node_weights[j] for j in range(int(n/2)) if j != i]
+        i = random.choices(range(n), weights=node_weights, k=1)[0]
+        j_candidates = [j for j in range(n) if j != i]
+        j_weights = [node_weights[j] for j in range(n) if j != i]
         j = random.choices(j_candidates, weights=j_weights, k=2)[0]
 
         if i > j:

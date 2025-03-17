@@ -1,0 +1,162 @@
+
+=====Result (Probability)=====
+POI: 40 | Tenure: 10
+POI: 40 
+avg soln: 1876.39
+dif: 79.44
+avg time: 0.0
+std dev: 187.86
+================
+
+POI: 40 | Tenure: 20
+POI: 40 
+avg soln: 1906.49
+dif: 79.0
+avg time: 0.0
+std dev: 169.08
+================
+
+POI: 40 | Tenure: 30
+POI: 40 
+avg soln: 1894.54
+dif: 79.24
+avg time: 0.0
+std dev: 176.35
+================
+
+POI: 80 | Tenure: 10
+POI: 80 
+avg soln: 3760.78
+dif: 33.56
+avg time: 0.01
+std dev: 216.3
+================
+
+POI: 80 | Tenure: 20
+POI: 80 
+avg soln: 3765.93
+dif: 34.04
+avg time: 0.01
+std dev: 222.26
+================
+
+POI: 80 | Tenure: 30
+POI: 80 
+avg soln: 3717.73
+dif: 34.36
+avg time: 0.01
+std dev: 253.28
+================
+
+POI: 160 | Tenure: 10
+POI: 160 
+avg soln: 8207.64
+dif: 23.35
+avg time: 0.03
+std dev: 406.97
+================
+
+POI: 160 | Tenure: 20
+POI: 160 
+avg soln: 8230.28
+dif: 23.65
+avg time: 0.03
+std dev: 403.16
+================
+
+POI: 160 | Tenure: 30
+POI: 160 
+avg soln: 8250.49
+dif: 23.78
+avg time: 0.03
+std dev: 380.54
+================
+
+
+=====Result (Momentum)=====
+POI: 40 | Tenure: 10
+avg soln: 1436.31
+dif: 58.86
+avg time: 0.03
+std dev: 287.91
+================
+
+POI: 40 | Tenure: 20
+avg soln: 1438.56
+dif: 58.86
+avg time: 0.03
+std dev: 285.43
+================
+
+POI: 40 | Tenure: 30
+avg soln: 1435.65
+dif: 58.86
+avg time: 0.03
+std dev: 288.19
+================
+
+POI: 80 | Tenure: 10
+avg soln: 3257.66
+dif: 24.4
+avg time: 0.12
+std dev: 299.62
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3267.23
+dif: 24.4
+avg time: 0.13
+std dev: 294.55
+================
+
+POI: 80 | Tenure: 30
+avg soln: 3263.35
+dif: 24.4
+avg time: 0.12
+std dev: 298.62
+================
+
+POI: 160 | Tenure: 10
+avg soln: 7755.4
+dif: 20.21
+avg time: 0.5
+std dev: 550.3
+================
+
+POI: 160 | Tenure: 20
+avg soln: 7754.66
+dif: 20.21
+avg time: 0.5
+std dev: 550.4
+================
+
+POI: 160 | Tenure: 30
+avg soln: 7753.12
+dif: 20.21
+avg time: 0.5
+std dev: 550.88
+================
+
+
+=====Result (Enhanced)=====
+POI: 40 
+avg soln: 1378.36
+dif: 58.86
+avg time: 0.1
+std dev: 321.88
+================
+
+POI: 80 
+avg soln: 3061.94
+dif: 23.45
+avg time: 0.16
+std dev: 413.98
+================
+
+POI: 160 
+avg soln: 7612.55
+dif: 19.84
+avg time: 0.44
+std dev: 641.67
+================
+

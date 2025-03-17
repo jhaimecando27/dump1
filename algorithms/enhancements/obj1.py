@@ -1,4 +1,4 @@
-from .utils import adaptive_perturb, neighborhood, wave_perturb
+from .utils import adaptive_perturb, neighborhood
 from algorithms.utils import val, best_admissible_soln, new_neighborhood
 import random
 import math
@@ -6,7 +6,7 @@ import math
 
 def tabu_search_with_perturbation(
     soln_init: list[int],
-    iter_max: int = 100,
+    iter_max=100,
 ) -> tuple[list[int], list[int]]:
 
     n = len(soln_init)

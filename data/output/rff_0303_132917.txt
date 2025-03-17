@@ -1,0 +1,23 @@
+
+=====Result (Enhanced)=====
+POI: 40 
+avg soln: 1374.53
+dif: 36.37
+avg time: 0.08
+std dev: 152.1
+================
+
+POI: 80 
+avg soln: 3299.91
+dif: 24.09
+avg time: 0.12
+std dev: 272.16
+================
+
+POI: 160 
+avg soln: 7326.18
+dif: 14.59
+avg time: 0.29
+std dev: 570.4
+================
+

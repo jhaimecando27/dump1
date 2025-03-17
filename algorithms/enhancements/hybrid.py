@@ -3,25 +3,25 @@ import numpy as np
 import concurrent.futures
 from .utils import (
     adaptive_perturb,
-    neighborhood,
     wave_perturb,
     update_quantum_state,
     calculate_quantum_tenure,
     calculate_phase_shift,
 )
 from algorithms.utils import val, new_neighborhood
+from .hybrid1 import neighborhood
 import random
 import math
 
 
 def tabu_search(
     soln_init: list[int],
-    iter_max: int = 100,
+    iter_max=100,
 ) -> tuple[list[int], list[int]]:
 
     n = len(soln_init)
     quantum_state = 0.5
-    tabu_tenure = math.floor(n * 0.15)  # Increased initial tenure
+    tabu_tenure = math.floor(n * 0.1)  # Increased initial tenure
     max_stagnant = 7  # Increased stagnation threshold
     tenure_reset_factor = 0.4  # Adjusted
     phase_shift = 0.0
@@ -186,9 +186,9 @@ def tabu_search(
                 tabu_tenure, quantum_state, n, stagnant_ctr, progress
             )
 
-            tabu_list.append(move_best)
             while len(tabu_list) > tabu_tenure:
                 tabu_list.pop(0)
+            tabu_list.append(move_best)
 
     return val(soln_global_best), soln_best_tracker
 

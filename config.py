@@ -7,8 +7,10 @@ dms = {}
 soln_inits = {}
 #pois = ["20", "80"]
 pois = ["40", "80", "160"]
+#pois = ["1000"]
 #pois = ["500"]
 tenures = [10, 20, 30]
+b_solns = [1236.72, 3091.85, 7227.75]
 distance_matrix: list[list[int]] = []
 
 for poi in pois:

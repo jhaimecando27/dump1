@@ -1,0 +1,46 @@
+
+=====Result (Momentum)=====
+POI: 40 
+avg soln: 1019.4
+dif: 150.55
+avg time: 0.5
+std dev: 272.27
+================
+
+POI: 80 
+avg soln: 2135.33
+dif: 173.79
+avg time: 0.56
+std dev: 590.72
+================
+
+POI: 160 
+avg soln: 4764.8
+dif: 153.75
+avg time: 2.55
+std dev: 1294.49
+================
+
+
+=====Result (Enhanced)=====
+POI: 40 
+avg soln: 1209.27
+dif: 99.66
+avg time: 0.09
+std dev: 288.86
+================
+
+POI: 80 
+avg soln: 3087.43
+dif: 63.98
+avg time: 0.16
+std dev: 494.67
+================
+
+POI: 160 
+avg soln: 7274.94
+dif: 26.84
+avg time: 0.44
+std dev: 549.2
+================
+

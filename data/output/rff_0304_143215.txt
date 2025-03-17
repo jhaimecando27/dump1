@@ -1,0 +1,88 @@
+
+=====Result (Adaptive Pulse Diversification Function)=====
+POI: 40 | Tenure: 10
+avg soln: 1539.53
+dif: 66.49
+avg time: 0.03
+std dev: 226.91
+================
+
+POI: 40 | Tenure: 20
+avg soln: 1536.05
+dif: 67.26
+avg time: 0.03
+std dev: 229.6
+================
+
+POI: 40 | Tenure: 30
+avg soln: 1564.63
+dif: 58.47
+avg time: 0.03
+std dev: 207.08
+================
+
+POI: 80 | Tenure: 10
+avg soln: 3255.07
+dif: 44.82
+avg time: 0.11
+std dev: 393.2
+================
+
+POI: 80 | Tenure: 20
+avg soln: 3249.83
+dif: 46.7
+avg time: 0.12
+std dev: 398.16
+================
+
+POI: 80 | Tenure: 30
+avg soln: 3247.33
+dif: 46.7
+avg time: 0.11
+std dev: 400.16
+================
+
+POI: 160 | Tenure: 10
+avg soln: 6987.78
+dif: 26.2
+avg time: 0.5
+std dev: 495.41
+================
+
+POI: 160 | Tenure: 20
+avg soln: 7000.33
+dif: 25.8
+avg time: 0.51
+std dev: 493.99
+================
+
+POI: 160 | Tenure: 30
+avg soln: 7001.85
+dif: 25.06
+avg time: 0.51
+std dev: 489.95
+================
+
+
+=====Result (other)=====
+POI: 40
+avg soln: 1420.03
+dif: 81.74
+avg time: 0.09
+std dev: 282.43
+================
+
+POI: 80
+avg soln: 3185.36
+dif: 54.01
+avg time: 0.16
+std dev: 449.87
+================
+
+POI: 160
+avg soln: 6776.3
+dif: 30.95
+avg time: 0.42
+std dev: 594.01
+================
+

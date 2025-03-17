@@ -8,8 +8,8 @@ from algorithms.utils import (
 
 
 def tabu_search(
-    soln_init: list[int],
-    tabu_tenure: int,
+    soln_init,
+    tabu_tenure,
     iter_max: int = 100,
 ) -> tuple[list[int], list[int], list[int]]:
 
