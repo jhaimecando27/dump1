@@ -4,7 +4,6 @@ from algorithms.utils import (
     val,
     prob_neighborhood,
     best_admissible_soln,
-    p2_neighborhood,
 )
 
 

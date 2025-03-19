@@ -1,4 +1,3 @@
-import config
 import random
 from algorithms.utils import val
 

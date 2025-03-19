@@ -61,12 +61,10 @@ def search(
             soln_best_tracker.append(val(soln_best))
 
             if stagnant_ctr > stagnant_best:
-                print(f"Stagnant iterations: {stagnant_ctr}")
                 stagnant_best = stagnant_ctr
 
             stagnant_ctr = 0
         else:
-            print(f"Stagnant iterations: {stagnant_ctr}")
             stagnant_ctr += 1
 
         soln_curr = nbhr_best.copy()
